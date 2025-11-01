@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode colors */
+    --bg-primary: 255 255 255;
+    --bg-secondary: 249 250 251;
+    --bg-tertiary: 243 244 246;
+    
+    --text-primary: 17 24 39;
+    --text-secondary: 75 85 99;
+    --text-tertiary: 156 163 175;
+    
+    --accent-primary: 249 115 22;
+    --accent-secondary: 251 146 60;
+    --accent-hover: 234 88 12;
+    
+    --border-primary: 229 231 235;
+    --border-secondary: 209 213 219;
+  }
+
+  .dark {
+    /* Dark mode colors */
+    --bg-primary: 17 24 39;
+    --bg-secondary: 31 41 55;
+    --bg-tertiary: 55 65 81;
+    
+    --text-primary: 243 244 246;
+    --text-secondary: 209 213 219;
+    --text-tertiary: 156 163 175;
+    
+    --accent-primary: 251 146 60;
+    --accent-secondary: 253 186 116;
+    --accent-hover: 249 115 22;
+    
+    --border-primary: 55 65 81;
+    --border-secondary: 75 85 99;
+  }
+
+  * {
+    @apply border-border-primary;
+  }
+
+  body {
+    @apply bg-background-primary text-text-primary;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-accent-primary text-white rounded-lg 
+           hover:bg-accent-hover transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-background-secondary text-text-primary rounded-lg
+           hover:bg-background-tertiary transition-colors duration-200
+           border border-border-primary;
+  }
+
+  .card {
+    @apply bg-background-primary border border-border-primary rounded-lg
+           shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+
+  .input {
+    @apply px-4 py-2 bg-background-primary border border-border-primary
+           rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-primary
+           focus:border-transparent text-text-primary placeholder-text-tertiary;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium
+           bg-accent-primary/10 text-accent-primary;
+  }
+}
