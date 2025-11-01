@@ -7,6 +7,11 @@ const result = await build({
   minify: true,
   splitting: true,
   sourcemap: 'external',
+  naming: {
+    entry: '[dir]/[name].[ext]',
+    chunk: '[name]-[hash].[ext]',
+    asset: '[name]-[hash].[ext]',
+  },
 });
 
 if (!result.success) {
@@ -14,12 +19,11 @@ if (!result.success) {
   process.exit(1);
 }
 
-// Copy index.html and update script path
+// Copy index.html
 const html = await Bun.file('index.html').text();
-const distHtml = html.replace('/src/main.tsx', '/main.js');
-await Bun.write('dist/index.html', distHtml);
+await Bun.write('dist/index.html', html);
 
 // Create 404.html for GitHub Pages SPA routing
-await Bun.write('dist/404.html', distHtml);
+await Bun.write('dist/404.html', html);
 
 console.log('✓ Build completed successfully');
