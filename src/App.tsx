@@ -12,8 +12,11 @@ export default function App() {
 
   // Load recipes on mount
   useEffect(() => {
+    console.log('Loading recipes:', sampleRecipes.length);
     setRecipes(sampleRecipes);
   }, [setRecipes]);
+
+  console.log('App rendering');
 
   return (
     <HashRouter>

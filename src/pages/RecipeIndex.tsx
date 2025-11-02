@@ -5,6 +5,8 @@ import { RecipeFilters } from '../components/recipe/RecipeFilters';
 export function RecipeIndex() {
   const { filteredRecipes, filters, setSortBy } = useRecipes();
 
+  console.log('RecipeIndex rendering, recipes:', filteredRecipes.length);
+
   return (
     <div className="space-y-8">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
