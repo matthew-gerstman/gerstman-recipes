@@ -21,13 +21,21 @@ export function Layout({ children }: LayoutProps) {
               </h1>
             </Link>
             
-            <button
-              onClick={toggleTheme}
-              className="btn-secondary"
-              aria-label="Toggle theme"
-            >
-              {theme === 'light' ? '🌙' : '☀️'}
-            </button>
+            <div className="flex items-center gap-4">
+              <Link 
+                to="/whats-for-dinner"
+                className="text-text-secondary hover:text-accent-primary transition-colors font-medium"
+              >
+                What's for Dinner?
+              </Link>
+              <button
+                onClick={toggleTheme}
+                className="btn-secondary"
+                aria-label="Toggle theme"
+              >
+                {theme === 'light' ? '🌙' : '☀️'}
+              </button>
+            </div>
           </div>
         </div>
       </nav>
