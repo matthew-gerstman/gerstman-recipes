@@ -10,13 +10,10 @@ import { sampleRecipes } from './data/recipes';
 export default function App() {
   const setRecipes = useSetAtom(recipesAtom);
 
-  // Load recipes on mount
   useEffect(() => {
-    console.log('Loading recipes:', sampleRecipes.length);
+    console.log('App mounted, loading', sampleRecipes.length, 'recipes');
     setRecipes(sampleRecipes);
   }, [setRecipes]);
-
-  console.log('App rendering');
 
   return (
     <HashRouter>
