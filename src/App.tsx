@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { useSetAtom } from 'jotai';
 import { useEffect } from 'react';
 import { Layout } from './components/layout/Layout';
@@ -16,13 +16,13 @@ export default function App() {
   }, [setRecipes]);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Layout>
         <Routes>
           <Route path="/" element={<RecipeIndex />} />
           <Route path="/recipe/:slug" element={<RecipeDetail />} />
         </Routes>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   );
 }

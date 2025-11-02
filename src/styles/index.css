@@ -4,39 +4,40 @@
 
 @layer base {
   :root {
-    /* Light mode colors */
-    --bg-primary: 255 255 255;
-    --bg-secondary: 249 250 251;
-    --bg-tertiary: 243 244 246;
+    /* Light mode - Benjamin Moore Grappa inspired */
+    --bg-primary: 255 254 252;
+    --bg-secondary: 248 246 243;
+    --bg-tertiary: 240 237 232;
     
-    --text-primary: 17 24 39;
-    --text-secondary: 75 85 99;
-    --text-tertiary: 156 163 175;
+    --text-primary: 45 41 50;
+    --text-secondary: 93 78 109;
+    --text-tertiary: 140 130 145;
     
-    --accent-primary: 249 115 22;
-    --accent-secondary: 251 146 60;
-    --accent-hover: 234 88 12;
+    /* Grappa purple as accent */
+    --accent-primary: 93 78 109;
+    --accent-secondary: 115 100 130;
+    --accent-hover: 75 62 89;
     
-    --border-primary: 229 231 235;
-    --border-secondary: 209 213 219;
+    --border-primary: 230 225 220;
+    --border-secondary: 210 205 200;
   }
 
   .dark {
-    /* Dark mode colors */
-    --bg-primary: 17 24 39;
-    --bg-secondary: 31 41 55;
-    --bg-tertiary: 55 65 81;
+    /* Dark mode - deeper Grappa tones */
+    --bg-primary: 28 24 32;
+    --bg-secondary: 38 34 42;
+    --bg-tertiary: 48 44 52;
     
-    --text-primary: 243 244 246;
-    --text-secondary: 209 213 219;
-    --text-tertiary: 156 163 175;
+    --text-primary: 245 243 240;
+    --text-secondary: 210 205 215;
+    --text-tertiary: 140 130 145;
     
-    --accent-primary: 251 146 60;
-    --accent-secondary: 253 186 116;
-    --accent-hover: 249 115 22;
+    --accent-primary: 140 120 160;
+    --accent-secondary: 160 140 180;
+    --accent-hover: 120 100 140;
     
-    --border-primary: 55 65 81;
-    --border-secondary: 75 85 99;
+    --border-primary: 55 50 60;
+    --border-secondary: 75 70 80;
   }
 
   * {
